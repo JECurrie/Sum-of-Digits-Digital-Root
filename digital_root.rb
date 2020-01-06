@@ -1,11 +1,3 @@
 def digital_root(n)
-  arr = (n.to_s).split('')
-
-  total = 0
-  arr.each { |i|
-  	total += i.to_i
-  } 
-  puts total
+  n < 10 ? n : digital_root(n / 10 + n % 10)
 end
-
-puts digital_root(16)
